@@ -23,6 +23,10 @@
     <%= f.label :published %><br />
     <%= f.check_box :published %>
   </div>
+  <div class="field">
+    <%= f.label :created_by %><br />
+    <%= f.collection_select :created_by_id, User.all, :id, :email, include_blank: true %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
