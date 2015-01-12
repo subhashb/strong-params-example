@@ -26,6 +26,8 @@ gem 'strong_parameters', '~> 0.2.3'
 
 gem 'devise', '~> 3.4.1'
 
+gem 'cancan', '~> 1.6.10'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
