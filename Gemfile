@@ -6,6 +6,7 @@ gem 'rails', '3.2.21'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mongoid', '~> 3.1.6'
+gem 'bson_ext', '~> 1.11.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,6 +23,8 @@ end
 gem 'jquery-rails'
 
 gem 'strong_parameters', '~> 0.2.3'
+
+gem 'devise', '~> 3.4.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
