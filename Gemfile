@@ -28,6 +28,8 @@ gem 'devise', '~> 3.4.1'
 
 gem 'cancan', '~> 1.6.10'
 
+gem 'active_attr', '~> 0.8.5'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

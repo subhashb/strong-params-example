@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :new_post, :only => [:create]
   
   load_and_authorize_resource
 
@@ -45,8 +44,11 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    @post = Post.new
+    result = CreatePost.call(post: @post, current_user: current_user, params: post_params)
+
     respond_to do |format|
-      if @post.save
+      if result.success?
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else
@@ -86,10 +88,6 @@ class PostsController < ApplicationController
 
   private
 
-  def new_post
-    @post = Post.new(post_params.merge(created_by: current_user))
-  end
-  
   def post_params
     params.require(:post).permit(:title, :body, :published)
   end

@@ -14,6 +14,9 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    active_attr (0.8.5)
+      activemodel (>= 3.0.2, < 5.0)
+      activesupport (>= 3.0.2, < 5.0)
     activemodel (3.2.21)
       activesupport (= 3.2.21)
       builder (~> 3.0.0)
@@ -131,6 +134,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_attr (~> 0.8.5)
   bson_ext (~> 1.11.1)
   cancan (~> 1.6.10)
   coffee-rails (~> 3.2.1)
